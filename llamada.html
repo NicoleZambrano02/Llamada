@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Incremento Sueldo
+    </title>
+    
+</head>
+<body>
+    <script>
+        let t,costo,d,turno;
+        t=parseFloat(prompt(`Escriba el tiempo que dura la llamada `))
+        if(t<=5){
+            costo=(t*0.5);
+        }
+        else if(t<=8){
+            costo=(t-5)*0.8+5;
+        }
+        else if(t<=10){
+            costo=(t-8)*0.7+(3*0.8)+5;
+        }
+        else{
+            costo=(t-10)*0.5+(2*0.7)+(3*0.8)+5;
+        }
+        d=prompt(`Escriba el dia en el que trabaja `);
+        if(d==`DOMINGO`){
+            costo=(costo*0.03)+costo;
+        }
+        else{
+            turno=prompt(`Escriba el turno en el que trabaja `);
+            if(turno==`MAT`){
+                costo=(costo*0.15)+costo;
+            }
+            else{
+                costo=(costo*0.1)+costo;
+            }
+        }
+        alert(`Su costo total a pagar es: ${costo}`);
+    </script> 
+</body>
+</html>
